@@ -1,0 +1,16 @@
+#:kivy 1.0.9
+<ToDoApp>:
+    orientation: 'vertical'
+    TextInput:
+        id: new_task
+        hint_text: 'Enter new task'
+        size_hint_y: None
+        height: 40
+    Button:
+        text: 'Add Task'
+        size_hint_y: None
+        height: 40
+        on_release: app.add_task()
+    BoxLayout:
+        id: task_list
+        orientation: 'vertical'
